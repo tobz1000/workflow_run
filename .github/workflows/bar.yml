@@ -1,0 +1,14 @@
+name: bar
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  call-foo:
+    uses: ./.github/workflows/foo.yml
+  bar:
+    needs: call-foo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, bar!
