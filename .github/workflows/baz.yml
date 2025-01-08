@@ -12,7 +12,7 @@ jobs:
       - name: workflow_run annotation
         if: ${{ github.event_name == 'workflow_run' }}
         run: "echo '::notice title=Deployment trigger::Triggered by workflow run: ${{ github.event.workflow_run.html_url }}'"
-      - run: echo "${{ toJson(github.event.workflow_run) }}" > workflow_run.json
+      - run: echo '${{ toJson(github.event.workflow_run) }}' > workflow_run.json
       - uses: actions/upload-artifact@v4
         with:
           path: workflow_run.json
