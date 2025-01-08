@@ -5,7 +5,7 @@ on:
   workflow_call:
   workflow_run:
     workflows: bar
-    types: completed
+    types: requested
 jobs:
   baz:
     runs-on: ubuntu-latest
