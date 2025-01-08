@@ -2,8 +2,11 @@ name: baz
 on:
   workflow_dispatch:
   workflow_call:
+  workflow_run:
+    workflows: bar
+    types: completed
 jobs:
   baz:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
+      - run: echo "${{ toJson(github.event.workflow_run) }}"
