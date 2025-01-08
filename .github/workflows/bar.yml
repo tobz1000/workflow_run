@@ -11,3 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
+  call-baz:
+    needs: bar
+    uses: ./.github/workflows/baz.yml

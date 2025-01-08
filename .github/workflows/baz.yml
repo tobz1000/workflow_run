@@ -1,9 +1,9 @@
-name: foo
+name: baz
 on:
   workflow_dispatch:
   workflow_call:
 jobs:
-  foo:
+  baz:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 0
+      - run: exit 1
