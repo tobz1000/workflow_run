@@ -6,5 +6,4 @@ jobs:
   foo:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: echo Hello, foo!
+      - run: echo Hello, foo!
