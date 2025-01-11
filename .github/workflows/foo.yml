@@ -8,6 +8,7 @@ jobs:
   foo:
     runs-on: ubuntu-latest
     steps:
+      - run: echo '${{ toJson(github.env) }}'
       - run: pwd
         working-directory: ${{ github.env.HOME }}
       - run: env
