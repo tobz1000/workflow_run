@@ -1,5 +1,7 @@
 name: foo
 on:
+  push:
+    branches: main
   workflow_dispatch:
   workflow_call:
 jobs:
@@ -7,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-        working-directory: ~
+        working-directory: '~'
       - run: env
