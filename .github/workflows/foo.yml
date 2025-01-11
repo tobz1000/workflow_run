@@ -7,4 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
+        working-directory: ~
       - run: env
